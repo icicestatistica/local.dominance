@@ -1,0 +1,25 @@
+Package: local.dominance
+Title: Teste de Dominância Local entre Duas Distribuições
+Version: 0.1.0
+Authors@R: 
+    person("Isabelle Cristina Idalgo Carnielli", email = "idalgo.isabelle@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = ""))
+Description: Implementa um método baseado em estimação de densidade kernel (KDE)
+    e teste de permutação para detectar e localizar regiões de dominância entre
+    duas distribuições. Inclui bootstrap de concordância para quantificar a
+    assertividade das regiões identificadas e visualizações com ggplot2.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    dplyr,
+    ggplot2,
+    knitr,
+    patchwork,
+    scales,
+    stats
+Suggests:
+    tidyverse,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
