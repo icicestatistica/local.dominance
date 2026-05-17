@@ -432,11 +432,7 @@ plot_densities <- function(yA, yB, name_A = "A", name_B = "B", name_y = "y") {
         "; Ponderada=", round(bc$certeza_ponderada, 3)
       )
     ) +
-    ggplot2::theme_minimal() +
-    ggplot2::scale_color_manual(
-      values = c("A" = "#F8766D", "B" = "#00BFC4", "none" = "gray"),
-      labels = c("A" = name_A, "B" = name_B, "none" = "Sem Dominância")
-    )
+    ggplot2::theme_minimal()
 }
 
 # -------------------------------------------------------------------------
