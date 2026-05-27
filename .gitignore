@@ -6,8 +6,6 @@
 /doc/
 /Meta/
 /inst/doc/
-man/*.Rd
-NAMESPACE
 .Rdata
 .httr-oauth
 .DS_Store
