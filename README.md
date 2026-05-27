@@ -1,11 +1,5 @@
 # dominancia <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
-<!-- badges: start -->
-
-[!\[R-CMD-check](https://github.com/seu-usuario/dominancia/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/seu-usuario/dominancia/actions/workflows/R-CMD-check.yaml)
-
-<!-- badges: end -->
-
 ## Visão Geral
 
 O pacote `local.dominance` implementa um método para detectar **regiões de dominância local** entre duas distribuições. Em vez de apenas responder "qual grupo tem média maior?", o método identifica *onde* no suporte da variável uma distribuição domina a outra.
