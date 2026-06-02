@@ -8,9 +8,9 @@ O pacote `local.dominance` implementa um método para detectar **regiões de dom
 
 |Função|Descrição|
 |-|-|
-|`local\_dominance()`|Função principal: roda o teste e retorna resultados + gráficos|
-|`report\_dominance()`|Imprime um relatório textual interpretativo|
-|`plot\_densities()`|Visualiza as densidades dos dois grupos|
+|`local_dominance()`|Função principal: roda o teste e retorna resultados + gráficos|
+|`report_dominance()`|Imprime um relatório textual interpretativo|
+|`plot_densities()`|Visualiza as densidades dos dois grupos|
 
 \---
 
@@ -18,7 +18,7 @@ O pacote `local.dominance` implementa um método para detectar **regiões de dom
 
 ```r
 # install.packages("devtools")
-devtools::install\_github("icicestatistica/local.dominance")
+devtools::install_github("icicestatistica/local.dominance")
 ```
 
 \---
@@ -39,23 +39,23 @@ yB <- c(rnorm(100, mean = -1, sd = 1), rnorm(100, mean = 2, sd = 1))
 # Rodar o teste de dominância local
 resultado <- local\_dominance(
   yA, yB,
-  name\_A = "Controle",
-  name\_B = "Tratamento",
-  name\_y = "Score",
+  name_A = "Controle",
+  name_B = "Tratamento",
+  name_y = "Score",
   B = 999
 )
 
 # Ver resultados
-resultado$p\_value        # p-valor do teste omnibus
+resultado$p_value        # p-valor do teste omnibus
 resultado$padrao         # padrão de dominância (ex: "Controle < Tratamento")
-resultado$LI\_assertividade  # limite inferior de assertividade (%)
+resultado$LI_assertividade  # limite inferior de assertividade (%)
 resultado$partition      # tabela com as faixas dominantes
 
 # Exibir gráfico
 resultado$grafico
 
 # Relatório completo
-report\_dominance(resultado)
+report_dominance(resultado)
 ```
 
 \---
@@ -77,10 +77,10 @@ Réplicas bootstrap estimam, em cada ponto do grid, a proporção de réplicas q
 
 ## Interpretação da saída
 
-* **`p\_value`**: p-valor do teste omnibus. Se > 0.05, não há evidência de dominância local.
+* **`p_value`**: p-valor do teste omnibus. Se > 0.05, não há evidência de dominância local.
 * **`padrao`**: sequência de dominância, ex.: `"A < B"` indica que B domina A em alguma região e A domina B em outra.
 * **`partition`**: data frame com start/end de cada faixa, o grupo dominante, as proporções de cada grupo naquela faixa (`prop\_A`, `prop\_B`) e a razão de proporções (`RP`).
-* **`LI\_assertividade`**: percentual do suporte com concordância bootstrap > 95%. Quanto mais próximo de 100, mais estável é a classificação.
+* **`LI_assertividade`**: percentual do suporte com concordância bootstrap > 95%. Quanto mais próximo de 100, mais estável é a classificação.
 
 \---
 
