@@ -532,7 +532,7 @@ plot_densities <- function(yA, yB, name_A = "A", name_B = "B", name_y = "y") {
 #' @param name_y Rótulo do eixo da variável de interesse. Padrão: `"y"`.
 #' @param B Número de permutações (teste omnibus) e de réplicas bootstrap
 #'   (concordância). Padrão: `999`.
-#' @param percent_exp Percentil das distribuições nulas usado como limiar para
+#' @param quantile Percentil das distribuições nulas usado como limiar para
 #'   selecionar candidatos dominantes. Padrão: `0.95`.
 #' @param graficos Lógico. Se `TRUE` (padrão), retorna um objeto `patchwork`
 #'   com três painéis: densidades, dominância e assertividade.
@@ -562,9 +562,9 @@ plot_densities <- function(yA, yB, name_A = "A", name_B = "B", name_y = "y") {
 #'
 #' @export
 local_dominance <- function(yA, yB, name_A = "A", name_B = "B", name_y = "y",
-                            B = 999, percent_exp = 0.95, graficos = TRUE) {
+                            B = 999, quantile = 0.95, graficos = TRUE) {
   
-  ld   <- .inner_local_dominance(yA, yB, name_A, name_B, name_y, B, percent_exp, graficos)
+  ld   <- .inner_local_dominance(yA, yB, name_A, name_B, name_y, B, quantile, graficos)
   part <- ld$partition
   part$dominante <- c("A" = name_A, "B" = name_B)[part$dominante]
   
