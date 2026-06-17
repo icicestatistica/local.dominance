@@ -11,7 +11,7 @@ local_dominance(
   name_B = "B",
   name_y = "y",
   B = 999,
-  percent_exp = 0.95,
+  quantile = 0.95,
   graficos = TRUE
 )
 }
@@ -29,7 +29,7 @@ local_dominance(
 \item{B}{Número de permutações (teste omnibus) e de réplicas bootstrap
 (concordância). Padrão: \code{999}.}
 
-\item{percent_exp}{Percentil das distribuições nulas usado como limiar para
+\item{quantile}{Percentil das distribuições nulas usado como limiar para
 selecionar candidatos dominantes. Padrão: \code{0.95}.}
 
 \item{graficos}{Lógico. Se \code{TRUE} (padrão), retorna um objeto \code{patchwork}
